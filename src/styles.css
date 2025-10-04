@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: aliceblue;
+  font-family: Haettenschweiler,Impact,'Arial Narrow Bold', sans-serif;
+}
+header{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #345663, #fefefe);
+  padding: 5px 0;
+}
+nav{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav button{
+  padding: 10px;
+  border-radius: 10px;
+
+}
