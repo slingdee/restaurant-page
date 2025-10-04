@@ -10,8 +10,9 @@ module.exports = {
     clean: true,
   },
   devtool: "eval-source-map",
-  devserver: {
-    watchFiles: ["./src/template.html"],
+  devServer: {
+    static: "./dist", //webpack serves your dist folder
+    watchFiles: ["./src/template.html"], //also reloads automatically whenever you edit src/template.html
   },
    plugins: [
     new HtmlWebpackPlugin({

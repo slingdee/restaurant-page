@@ -1,21 +1,35 @@
 import "./styles.css"
 import restaurantImage from "./jirayu-unsplash.jpg"
-console.log("welcome to webpack");
+import loadHome from "./home";
+import loadMenu from "./menu";
+import loadAbout from "./about";
 
+function clearContent(){
+  document.getElementById("content").textContent = ""
+}
 
-const content = document.querySelector("#content");
+function init(){
+  //load default page
+  loadHome();
 
-const headline = document.createElement("h2");
-headline.textContent = "Broman Hotel";
-content.appendChild(headline);
+  //event listeners
+  document.getElementById("homeBtn").addEventListener("click", ()=>{
+    clearContent()
+    loadHome()
+  });
 
-const hotelDescription = document.createElement("p");
-hotelDescription.textContent = "Nestled in the heart of Naivasha, Broman Hotel offers modern luxury, personalized service, and breathtaking views — perfect for both business and leisure travelers."
-content.appendChild(hotelDescription);
+  document.getElementById("menuBtn").addEventListener("click", ()=>{
+    clearContent();
+    loadMenu();
+  });
 
-const restaurantPhoto = document.createElement("img");
-restaurantPhoto.src = restaurantImage;
-content.appendChild(restaurantPhoto);
+  document.getElementById("aboutBtn").addEventListener("click", ()=>{
+    clearContent();
+    loadAbout();
+  });
+
+}
+init()
 
 
 
